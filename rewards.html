@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward Lists</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #ff6f61; /* Orange background color */
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .coupon {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .coupon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .coupon .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coupon .details h3 {
+            margin-bottom: 5px;
+        }
+
+        .coupon .details p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .coupon .button {
+            background-color: #ff6f61; /* Orange button color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .bottom-navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: bottom;
+        position: fixed;
+        top:93vh;
+        width: 100vw;
+        height: 70vh;
+        background-color: #fff;
+      }
+
+      .nav-button img {
+        width: 90px;
+        height: 60px;
+      }
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <div class="heading">
+            Redeem for 1000 points
+        </div>
+        <!-- Coupons -->
+        <div class="coupon">
+            <img src="amazon.jpeg" alt="Coupon 1">
+            <div class="details">
+                <h3>Amazon 75% Discount Coupon</h3>
+                <p>Ends on 31st Dec, 2024</p>
+            </div>
+            <a href="https://www.amazon.com" class="button">Go</a>
+        </div>
+        <div class="coupon">
+            <img src="flipcart.jpeg" alt="Coupon 2">
+            <div class="details">
+                <h3>FlipKart 60% Discount Coupon</h3>
+                <p>Ends on 31st Dec, 2024</p>
+            </div>
+            <a href="https://www.flipkart.com" class="button">Go</a>
+        </div>
+        <div class="coupon">
+            <img src="myntra.jpeg" alt="Coupon 3">
+            <div class="details">
+                <h3>Myntra Discount Coupon (50% off)</h3>
+                <p>Ends on 31st Dec, 2024</p>
+            </div>
+            <a href="https://www.myntra.com" class="button">Go</a>
+        </div>
+        <!-- Additional Coupons -->
+        <div class="coupon">
+            <img src="adidias.png" alt="Coupon 4">
+            <div class="details">
+                <h3>Adidas 90% off Coupon (T&C apply)</h3>
+                <p>Ends on 31st August, 2025</p>
+            </div>
+            <a href="https://www.adidas.co.in" class="button">Go</a>
+        </div>
+        <div class="coupon">
+            <img src="amazon.jpeg" alt="Coupon 5">
+            <div class="details">
+                <h3>Amazon Great Indian Festival Early Access</h3>
+                <p>Ends on 31st Dec, 2024</p>
+            </div>
+            <a href="https://www.amazon.com" class="button">Go</a>
+        </div>
+    </div>
+    <div class="bottom-navigation">
+        <a href="camera.html" class="nav-button">
+          <img src="home2.png" alt="Home Icon" />
+        </a>
+        <a href="points.html" class="nav-button">
+          <img src="giftsicon3.png" alt="Gifts Icon" />
+        </a>
+        <a href="User.html" class="nav-button">
+          <img src="profileicon.png" alt="Profile Icon" />
+        </a>
+      </div>
+  
+    
+</body>
+</html>

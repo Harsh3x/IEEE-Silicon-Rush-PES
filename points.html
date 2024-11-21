@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CalSnap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color:#ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      cursor : pointer;
+      height: 80%;
+      overflow-y: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+
+    }
+
+  </style>
+   <style>
+    /* Styling the navigation bar */
+    .bottom-navigation{
+      display: flex;                /* Use flexbox for layout */
+      justify-content: space-around; /* Distribute buttons evenly */
+      align-items: center;          /* Center align buttons vertically */
+      position: fixed;              /* Fix the nav bar at the bottom */
+      bottom: 5px;                    /* Stick to the bottom of the viewport */
+      width: 105vw;                  /* Full width */
+      height: 50px;                 /* Adjust height */         
+    }
+  
+
+    /* Styling icons inside buttons */
+    .nav-button img {
+      width: 95px;                  /* Adjust icon size */
+      height: 65px;
+      bottom: 10px;                 /* Ensure uniform size */
+      display: inline-block;        /* Keep them inline */ 
+       }
+
+    .fixed-image {
+            position: absolute;
+            left:32vw;
+            top:28vh;
+            width: 32vw; /* Set width */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+      #point1{
+        position: relative;
+        left: 1rem;
+      }
+
+      .bg{
+        position:relative;
+        bottom:5vh;
+        height:90vh;
+        width:100vw;
+      }
+
+  </style>
+
+
+  
+</head>
+<body>
+  <div class="container">
+    <img id="main" src="Pointsf.png" alt="CalSnap Logo" class="bg">
+    <span style="position:absolute; top:6vh;left:26vw;font-size: 40px;color:#FF5E18" id ="points"> <h1 id="point1"> 000</h1></span>
+     <!-- Link to the next HTML file -->
+     <a href="rewards.html">
+      <img src="Buttonp.png" alt="Description of Image" class="fixed-image">
+  </a>
+
+  </div>
+
+  <div class="bottom-navigation">
+    <a href="camera.html" class="nav-button">
+      <img src="home2.png" alt="Home Icon">
+    </a>
+    <a href="points.html" class="nav-button">
+      <img src="giftsicon3.png" alt="Gifts Icon">
+    </a>
+    <a href="User.html" class="nav-button">
+      <img src="profileicon.png" alt="Profile Icon">
+    </a>
+  </div>
+  <script>
+    let data;
+    async function updatePoints() {
+      const response=await fetch('http://10.20.200.234:3001');
+      console.log("response: ",response);
+      data=await response.json();
+      const points=document.getElementById("point1");
+      const result=JSON.parse(localStorage.getItem('details'));
+      console.log("this is data: ",data.healthpoints);
+      if(result){
+        points.innerText=data.healthpoints+result.healthpoints;
+      }
+    }
+    updatePoints();
+  </script>
+</body>
+</html>
+</html>
