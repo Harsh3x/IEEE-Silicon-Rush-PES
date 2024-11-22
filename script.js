@@ -30,7 +30,7 @@ async function apihandling(file) {
     result = await response.json();
 
     const foodResponse = await fetch(
-      `http://172.17.13.208:3001/foodinfo/blaziken/${result.prediction}`
+      `https://fooddetails-r5uoag49i-raju2.vercel.app/foodinfo/blaziken/${result.prediction}`
     );
     if (!foodResponse.ok)
       throw new Error(`Food Info API error: ${foodResponse.status}`);
