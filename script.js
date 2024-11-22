@@ -20,7 +20,7 @@ imgIcon.addEventListener("click", () => {
 });
 
 async function apihandling(file) {
-  const url = "http://172.17.13.208:8000/predict";
+  const url = "https://web-production-a3f9.up.railway.app/predict";
   const formData = new FormData();
   formData.append("file", file);
 
