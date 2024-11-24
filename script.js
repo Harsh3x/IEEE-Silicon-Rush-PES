@@ -74,7 +74,12 @@ cameraInput.addEventListener("change", async (event) => {
         document.getElementById("carb1").innerText = `${detail.carbohydrates * 0.5}g`;
         document.getElementById("fat1").innerText = `${detail.fats * 0.5}g`;
         document.getElementById("calorie1").innerText = `${detail.calories * 0.5} kcal`;
+
+        //document.getElementById("point1").innerText=detail.healthpoints+result.healthpoints;
       }
+
+    
+
     };
     // const res=await detail.text();
     // localStorage.setItem("details",res);

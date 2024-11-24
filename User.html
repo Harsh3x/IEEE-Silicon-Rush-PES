@@ -62,10 +62,10 @@
 <body>
   <div class="container">
     <img src="UserDesgin2.png" alt="CalSnap Logo">
-    <span class="info" style="position:absolute;top:6vh;left:12vw;font-size: 30px;" id ="calorie"> <h1>0</h1></span>
-    <span class="info" style="position:absolute; top:34vh;left:10vw;;font-size: 20px;" id="carb"> <h1>0g</h1></span>
-    <span class="info" style="position:absolute;top:70vh;left:10vw; font-size: 20px;" id="fat"> <h1>0g</h1></span>
-    <span class="info" style="position:absolute;top:105vh;left:10vw;font-size:20px;" id="protien"> <h1>0g</h1></span>
+    <span class="info" style="font-weight:bold; position: absolute;top:9vh;left:6vw;font-size: 8.5vh;" id ="calorie"> <h1>0</h1></span>
+    <span class="info" style="font-weight:bold; position:absolute; top:38vh;left:10vw;;font-size: 35px;" id="carb"> <h1>0g</h1></span>
+    <span class="info" style="font-weight:bold;position:absolute;top:75vh;left:10vw; font-size: 35px;" id="fat"> <h1>0g</h1></span>
+    <span class="info" style="font-weight:bold;position:absolute;top:109vh;left:10vw;font-size:35px;" id="protien"> <h1>0g</h1></span>
   </div>
 
   <div class="bottom-navigation">
@@ -93,7 +93,7 @@
       const temp3=f1.innerText;
       const temp4=p1.innerText;
       console.log("prev calorie: ",temp1);
-      c1.innerHTML=`${parseInt(temp1)+result.calories} k`;
+      c1.innerHTML=`${parseInt(temp1)+result.calories}`;
       cb1.innerHTML=`${parseInt(temp2)+result.carbohydrates}g`;
       f1.innerHTML=`${parseInt(temp3)+result.fats}g`;
       p1.innerHTML=`${parseInt(temp4)+result.protein}g`;
